@@ -20,11 +20,15 @@ public class UrlModel implements Serializable{
 
     private Integer views;
 
-//    public UrlModel(String url, String alias) {
-//        this.url = url;
-//        this.alias = alias;
-//        this.views = 0;
-//    }
+    public UrlModel() {
+
+    }
+
+    public UrlModel(String url, String alias) {
+        this.url = url;
+        this.alias = alias;
+        this.views = 0;
+    }
 
     public Long getId() {
         return id;
