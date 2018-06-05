@@ -8,14 +8,36 @@
 </head>
 <body>
 
-    <h1>Encurtar uma novo link:</h1>
-    <form method="post">
-        Url: <input type="text" value="" name="url" />
-        Alias: <input type="text" value="" name="alias" />
+    <div class="container">
+        <h1>Encurtar uma novo link:</h1>
 
-        <button type="submit">Salvar</button>
-
-    </form>
+        <div class="row">
+            <ul class="nav nav-tabs nav-fill col-md12">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/shortNewUrl">Encurtar uma nova url</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="url">Lista de links</a>
+                </li>
+            </ul>
+        </div>
+        <form method="post">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label>Url:</label>
+                    <input type="text" class="form-control" value="" name="url" />
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Alias:</label>
+                    <input type="text" class="form-control" value="" name="alias" />
+                </div>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+        </form>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
