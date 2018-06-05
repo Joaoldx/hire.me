@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Bemobi</title>
+</head>
+<body>
+
+    <h1>Lista de links</h1>
+    <h3><a href="/shortNewUrl">Encurtar uma nova url</a> </h3>
+
+    <div th:each="currentUrl : ${urlmodel}">
+        <div class="row">
+            <p><a th:href="${(#mvc.url('UC#detailsUrl').arg(0, currentUrl.id)).build()}"><span th:text="${currentUrl.url}"></span></a></p>
+            <p><span th:text="${currentUrl.alias}"></span></p>
+            <p><span th:text="${currentUrl.views}"></span></p>
+
+        </div>
+    </div>
+
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+</body>
+</html>

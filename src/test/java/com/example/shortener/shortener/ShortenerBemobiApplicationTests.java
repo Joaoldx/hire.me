@@ -1,4 +1,4 @@
-package com.example.shortener;
+package com.example.shortener.shortener;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
