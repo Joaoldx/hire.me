@@ -15,10 +15,10 @@ public class UrlService {
 	@Autowired
 	private UrlRepository urlRepository;
 	
-//	public Url find(Long id) {
-//		Optional<Url> obj = urlRepository.findById(id);
-//		return obj.orElseThrow(() -> new ObjNotFoundException(
-//				"Objeto não encontrado! Id: " + id + ", Tipo: " + Url.class.getName()));
-//	}
+	public UrlModel find(Long id) {
+		Optional<UrlModel> obj = urlRepository.findById(String.valueOf(id));
+		return obj.orElseThrow(() -> new ObjNotFoundException(
+				"Objeto não encontrado! Id: " + id + ", Tipo: " + UrlModel.class.getName()));
+	}
 
 }

@@ -8,14 +8,31 @@
 </head>
 <body>
 
-    <h1>Detalhe</h1>
-    <h3><a href="/shortNewUrl">Encurtar uma nova url</a> </h3>
-
-    <div th:each="currentUrl : ${urlmodel}">
+    <div class="container">
         <div class="row">
-            <p><a th:href="${(#mvc.url('UC#detailsUrl').arg(0, currentUrl.id)).build()}"><span th:text="${currentUrl.url}"></span></a></p>
-            <p><span th:text="${currentUrl.alias}"></span></p>
-            <p><span th:text="${currentUrl.views}"></span></p>
+            <h1>Detalhes</h1>
+        </div>
+
+        <div class="row">
+            <ul class="nav nav-tabs nav-fill">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/shortNewUrl">Encurtar uma nova url</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/encurtador">Lista de links</a>
+                </li>
+            </ul>
+        </div>
+
+        <div th:each="currentUrl : ${urlmodel}">
+            <div class="row">
+                <p><a th:href="${(#mvc.url('UC#detailsUrl').arg(0, currentUrl.id)).build()}"><span th:text="${currentUrl.url}"></span></a></p>
+                <p><span th:text="${currentUrl.alias}"></span></p>
+                <p><span th:text="${currentUrl.views}"></span></p>
+            </div>
         </div>
     </div>
 
